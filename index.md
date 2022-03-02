@@ -43,7 +43,7 @@ this video appears to be concise and clear on the subject. It also shows “pyth
 4.	I created a simple script. It has some hard-coded data I am saving into a file and reading from it. It also allows one input from the user in order to demonstrate re-writing into the file and exception handling. However, I am not using “append” mode. Unpickling after data was pickled in “append” mode returns a separate list and requires additional work to structure it. I chose to overwrite data after the addition of new item as an acceptable method for this simple example.
 
 ## Running script:
- 
+ ![](https://github.com/Taccdimas/IntroToProg-Python-Mod07/blob/main/running%20script.png?raw=true)
  
 ## Examples of Exceptions in Python:
 I added exception into writing data into file function in case of “read-only” file when IO error is generated:
