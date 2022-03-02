@@ -24,10 +24,6 @@ The purpose of this assignment is to do research and provide examples on how to 
 ## Web Search on Exception Handling in Python:
 I found https://realpython.com/python-exceptions/
 to be the most comprehensive source of the subject. This web page contains visual diagrams of the code to be performed  
-## Example from previous assignment:
-I needed to have a number from user’s input in Assignment 04, so I used exception handling as follows:
- 
-
 ## Pickling data:
 -	Better way to save complex data than converting to text
 -	Can pickle numbers, strings, tuples, lists, dictionaries
@@ -47,12 +43,30 @@ this video appears to be concise and clear on the subject. It also shows “pyth
  
 ## Examples of Exceptions in Python:
 I added exception into writing data into file function in case of “read-only” file when IO error is generated:
- 
+ ```
+ def write_file(list, file):  # Function to write into binary file. Overwrite
+    try:  # Handling exception if file is "Read-only"
+        with open(file, "wb") as obj_file:
+            pickle.dump(list, obj_file)
+    except IOError:
+        print("\nNo access to file. Program is terminated")
+        exit()
+ ```
 Also, ID from the user should be integer number, so it was handled with ValueError exception:
- 
+```
+    try:
+        new_id = int(input("\nInput ID for new user: "))
+        if new_id > 3:
+            break
+        else:
+            print("ID already exists")
+            continue
+    except ValueError:  # raised when value for ID is not integer
+        print("\nID should be an integer")
+```
 
 ## Running from CMD:
- 
+ ![](https://github.com/Taccdimas/IntroToProg-Python-Mod07/blob/main/running%20from%20CMD.png?raw=true)
 
 ## Summary:
 During the work on this assignment, I created a simple script with writing and reading data from a binary file. This script also demonstrated basic exceptions. Module07 video and notes were very helpful. 
